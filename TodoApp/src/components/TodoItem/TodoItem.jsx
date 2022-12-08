@@ -2,7 +2,7 @@ import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
 import { Button, List, Popconfirm, Switch, Tag, Tooltip, Typography } from 'antd'
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteTodo, updateTodo } from '../todoSlice'
+import { deleteTodo, updateTodo } from '../../redux/todoSlice'
 
 const TodoItem = ({item}) => {
     const dispatch = useDispatch();

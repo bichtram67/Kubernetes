@@ -2,7 +2,7 @@ import { Divider, List, Typography } from 'antd'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import TodoItem from '../TodoItem/TodoItem'
-import { getTodoList } from '../todoSlice'
+import { getTodoList } from '../../redux/todoSlice'
 
 const TodoList = () => {
     const data = ['Shopping', 'Having Dinner']

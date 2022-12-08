@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Form, Input } from 'antd'
 import { PlusOutlined } from '@ant-design/icons'
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../todoSlice';
+import { addTodo } from '../../redux/todoSlice';
 
 
 
