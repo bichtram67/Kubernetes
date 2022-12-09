@@ -1,24 +1,19 @@
+# base image
+FROM node:9.4
 
-# Step 1
+# set working directory
+WORKDIR /usr/src/app
 
-FROM node:10-alpine as build-step
-
-RUN mkdir /app
-
-WORKDIR /app
-
-COPY package.json /app
-
+# install and cache app dependencies
+COPY package*.json ./
+ADD package.json /usr/src/app/package.json
 RUN npm install
 
-COPY . /app
+# Bundle app source
+COPY . .
 
-RUN npm run build
+# Specify port
+EXPOSE 3000
 
- 
-
-# Stage 2
-
-FROM nginx:1.17.1-alpine
-
-COPY --from=build-step /app/build /usr/share/nginx/html
+# start app
+CMD ["npm", "start"]
